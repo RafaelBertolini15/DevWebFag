@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario atividade</title>
+</head>
+<body>
+    <header>
+        <h1>Página de Cadastro</h1>
+    </header>
+
+    <form>
+        <fieldset>
+            <legend><strong>Crie sua conta</strong></legend>
+
+            <ul>
+                <label for="nome">Nome:</label>
+                <br>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+            </ul>
+
+            <ul>
+                <label for="email">E-mail:</label>
+                <br>
+                <input type="text" name="email" id="email" placeholder="seuemail@exemplo.com" required>
+            </ul>
+            
+            <ul>
+                <label for="senha">Senha (Minímo 8 caracteres):</label>
+                <br>
+                <input type="password" name="senha" id="senha" placeholder="Digite sua senha aqui" minlength="8" required>
+            </ul>
+
+
+            <ul>
+                <label for="genero"><strong>Gênero:</strong></label>
+                
+                <div>
+                    <input type="radio" id="genero" name="genero" value="masculino">
+                    <label for="masculino">Masculino</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="genero" name="genero" value="feminino">
+                    <label for="feminino">Feminino</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="genero" name="genero" value="outro"> 
+                    <label for="outro">Outro</label>
+                </div>
+
+            </ul>
+                
+            <ul>
+                <label for="biografia">Biografia:</label>
+                <br>
+                <textarea type="text" name="biografia" id="biografia" placeholder="Fale um pouco sobre você..." required rows="10" cols="40"></textarea>
+            </ul>
+
+            <ul>
+                <input type="checkbox" id="checkbox" name="checkbox" value="checkbox" required>
+                <label for="checkbox"> Eu li e aceito os termos de serviço.</label>
+            </ul>
+
+        </fieldset>
+
+        <ul>
+            <input type="submit" id="enviar" name="enviar" value="Cadastrar">
+            <input type="reset" value="Limpar">
+        </ul>
+    </form>
+</body>
+</html>
