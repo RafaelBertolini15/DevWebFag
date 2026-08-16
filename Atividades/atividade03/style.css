@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #a1d4ee;
+}
+
+article {
+    width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid grey;
+    background-color: white;
+}
+
+h2 { 
+    color: red;
+    font-size: 30px;
+}
+
+p {
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+}
+
+nav a{
+    text-decoration: none;
+    color: rgb(23, 13, 13);
+    margin: 10px;
+}
+
+nav a:hover {
+    color: red;
+}
