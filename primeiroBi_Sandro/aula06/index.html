@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <section id="container">
+    <div class="content">
+        <h1>Teste JS 1</h1>
+    </div>
+
+    <div class="content">
+        <h1>Teste JS 2</h1>
+    </div>
+    <button onclick="alterarCor()">
+        <h1>Alterar Cor</h1>
+    </button>
+    <button onclick="criarParagrafo()">
+        <h1>Criar Parágrafo</h1>
+    </button>
+    </section> -->
+
+    <section>
+        <h1>Carrinho:</h1>
+        <form onsubmit="{cadastrar(event)}">
+            <label for="produto">Informe o produto:</label>
+            <input type="text" id="produto" name="produto">
+            <label for="quantidade">Informe a quantidade:</label>
+            <input type="number" id="quantidade" name="quantidade"> 
+
+            <button>Enviar</button>          
+        </form>
+        <h2>
+            Lista de produtos:
+        </h2>
+        <ul class="lista">
+        </ul>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>
