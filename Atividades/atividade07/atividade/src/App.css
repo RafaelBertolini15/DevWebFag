@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #a1d4ee;
+}
+
+main {
+  display: grid;
+    grid-template-areas: 
+        "header header"
+        "aside article"
+        "footer footer";
+    grid-template-columns: 1fr 5fr;
+    gap: 3px;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-areas:
+            "header"
+            "article"
+            "aside"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+}
