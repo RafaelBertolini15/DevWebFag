@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho catalogo de produtos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <h1>Catalogo de Produtos</h1>
+        <p>Confira os produtos carregados da API.</p>
+    </header>
+
+    <main class="container">
+        <button id="carregarProdutos">Carregar Produtos</button>
+
+        <p id="mensagem" role="status" aria-live="polite">
+            Clique no botão acima para carregar os produtos da API.
+        </p>
+
+        <section id="produtos" class="produtos">
+            <!-- Os produtos carregados da API serão exibidos aqui -->
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Catalogo de Produtos. Todos os direitos reservados a mim.</p>
+    </footer>
+</body>
+</html>
