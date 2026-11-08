@@ -2,16 +2,32 @@ import "./styles/utility.css";
 import Logo from "./assets/logo.svg";
 import RetangleUm from "./assets/images/Rectangle1.png";
 import RetangleDois from "./assets/images/Rectangle2.png";
+import ProfileImageOne from "./assets/images/_image.webp";
+import Meci from "./assets/images/meci.jpeg";
+import Cj from "./assets/images/cj.jpg";
 import Menu from "./assets/icons/menu.svg";
 import Close from "./assets/icons/close.svg";
+import Proativ from "./assets/icons/proativ.svg";
+import Relogio from "./assets/icons/relogio.svg";
+import Inform from "./assets/icons/inform.svg";
+import Star from "./assets/icons/estrela.svg"
 import "./styles/header.css";
 import "./styles/hero.css";
-import { useState } from "react";
+import "./styles/solution.css";
+import "./styles/testimonials.css";
+import { useEffect, useState } from "react";
 import Button from "./components/Button";
 
 export default function Home() {
 
     const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+    useEffect(() => {
+        const html = document.querySelector("html");
+        if (html) {
+            html.style.overflow = showMobileMenu ? "hidden" : "auto";
+        }
+    }, [showMobileMenu]);
 
     return (
         <>
@@ -79,25 +95,209 @@ export default function Home() {
                 </nav>
             </header>
 
-            <span className="desktop-only">
-                <img src={RetangleDois} alt="Retangulo um tela inicial" />
-            </span>
-            <img src={RetangleUm} alt="Retangulo dois tela inicial" />
 
-            <div className="container content">
-                <p className="desktop-only">
-                    Olá
-                </p>
-                <h1>Comida de mãe direto no seu apê, é só pedir que entregamos para você!</h1>
-                <p>Já pensou em matar a saudade daquela comida caseira? O melhor de tudo, nossas receitas são 100% saudáveis, bora entrar no shape.
-                </p>
-                <div className="flex gap-1">
-                    <span><Button text="Cadastre-se" /></span>
-                    <span className="desktop-only">
-                        <Button text="Veja mais" secondary />
-                    </span>
+            <section id="hero">
+                <span className="desktop-only">
+                    <img src={RetangleDois} alt="Retangulo um tela inicial" />
+                </span>
+                <img src={RetangleUm} alt="Retangulo dois tela inicial" />
+
+                <div className="container content">
+                    <p className="desktop-only">
+                        Olá, prazer! Meu nome é
+                    </p>
+                    <h1>Rafael Henrique Bertolini</h1>
+                    <p>Nesse site farei uma apresentação breve sobre mim.
+                    </p>
+                    <div className="flex gap-1">
+                        <Button text="Cadastre-se" />
+                        <span className="desktop-only">
+                            <Button text="Veja mais" secondary />
+                        </span>
+                    </div>
                 </div>
-            </div>
+            </section>
+
+            <section className="container" id="solution">
+                <header>
+                    <span>
+                        <h2>Apresentação</h2>
+                        <span className="desktop-only">
+                            <h2>aa</h2>
+                        </span>
+                    </span>
+                    <p>
+                        Aqui apresento minhas principais <strong>qualidades</strong> para você!
+                    </p>
+                </header>
+
+                <section className="even-columns">
+                    <div className="card">
+                        <span>
+                            <img src={Proativ} />
+                        </span>
+                        <div>
+                            <h3>afsfs</h3>
+                            <p>aaaa sfsdffsfssdf fssf sfghgdhjdfdgbnf hgdf ggfbfgewvdbsfe wev rgfdsfdefvds </p>
+                            <hr />
+                        </div>
+                    </div>
+                    <div className="card">
+                        <span>
+                            <img src={Relogio} />
+                        </span>
+                        <div>
+                            <h3>adsf</h3>
+                            <p>aaaaasdada da dff adfa dfdadsdfddafsgf hdgfdfsg df  dg dfg</p>
+                            <hr />
+                        </div>
+                    </div>
+                    <div className="card">
+                        <span>
+                            <img src={Inform} />
+                        </span>
+                        <div>
+                            <h3>afddfds</h3>
+                            <p>aaaafdsf sf sdf sgfsdfgdfgdgd ggh gfhgfhgfhhfhfhjghjghjgdgfdgf  ddgfdgddgdg </p>
+                            <hr />
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section id="testimonials">
+                <header>
+                    <span>
+                        <p className="desktop-only">
+                            Conselho de quem conhece
+                        </p>
+                        <h2>Cada cliente importa!</h2>
+                    </span>
+                    <p>
+                        Quem sabe da qualidade do dev, recomenda:
+                    </p>
+                </header>
+                <section className="carousel">
+                    <div className="carousel-content">
+                        <div className="carousel-card">
+                            <img src={ProfileImageOne} alt="Imagem perfil cliente" />
+                            <span className="testimony">
+                                <p>
+                                    Slk, dev muito ruim kkkk
+                                </p>
+                            </span>
+                            <span className="rating">
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela sem fundo" width={20} height={22} />
+                            </span>
+                            <span className="names">
+                                <p>Miranha</p>
+                                <p>Amigão da vizinhança</p>
+                            </span>
+                        </div>
+                        <div className="carousel-card">
+                            <img src={Cj} alt="Imagem perfil cliente" />
+                            <span className="testimony">
+                                <p>
+                                    Certamente the worst que already vi!
+                                </p>
+                            </span>
+                            <span className="rating">
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela sem fundo" width={20} height={22} />
+                            </span>
+                            <span className="names">
+                                <p>Carlos Joãoson</p>
+                                <p>Oh shit, here go again</p>
+                            </span>
+                        </div>
+                        <div className="carousel-card">
+                            <img src={Meci} alt="Imagem perfil cliente" />
+                            <span className="testimony">
+                                <p>
+                                    O pior macaquito que já vi!
+                                </p>
+                            </span>
+                            <span className="rating">
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela sem fundo" width={20} height={22} />
+                            </span>
+                            <span className="names">
+                                <p>Meçi careca</p>
+                                <p>Filho da FIFA</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div className="carousel-content">
+                                                <div className="carousel-card">
+                            <img src={ProfileImageOne} alt="Imagem perfil cliente" />
+                            <span className="testimony">
+                                <p>
+                                    Slk, dev muito ruim kkkk
+                                </p>
+                            </span>
+                            <span className="rating">
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela sem fundo" width={20} height={22} />
+                            </span>
+                            <span className="names">
+                                <p>Miranha</p>
+                                <p>Amigão da vizinhança</p>
+                            </span>
+                        </div>
+                        <div className="carousel-card">
+                            <img src={Cj} alt="Imagem perfil cliente" />
+                            <span className="testimony">
+                                <p>
+                                    Certamente the worst que already vi!
+                                </p>
+                            </span>
+                            <span className="rating">
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela sem fundo" width={20} height={22} />
+                            </span>
+                            <span className="names">
+                                <p>Carlos Joãoson</p>
+                                <p>Oh shit, here go again</p>
+                            </span>
+                        </div>
+                        <div className="carousel-card">
+                            <img src={Meci} alt="Imagem perfil cliente" />
+                            <span className="testimony">
+                                <p>
+                                    O pior macaquito que já vi!
+                                </p>
+                            </span>
+                            <span className="rating">
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                                <img src={Star} alt="ícone estrela sem fundo" width={20} height={22} />
+                            </span>
+                            <span className="names">
+                                <p>Meçi careca</p>
+                                <p>Filho da FIFA</p>
+                            </span>
+                        </div>
+                    </div>
+                </section>
+            </section>
         </>
     )
 }
