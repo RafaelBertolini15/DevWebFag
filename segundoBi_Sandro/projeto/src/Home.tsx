@@ -10,11 +10,13 @@ import Close from "./assets/icons/close.svg";
 import Proativ from "./assets/icons/proativ.svg";
 import Relogio from "./assets/icons/relogio.svg";
 import Inform from "./assets/icons/inform.svg";
-import Star from "./assets/icons/estrela.svg"
+import Star from "./assets/icons/estrela.svg";
+import Check from "./assets/icons/check.svg";
 import "./styles/header.css";
 import "./styles/hero.css";
 import "./styles/solution.css";
 import "./styles/testimonials.css";
+import "./styles/cartoesPricing.css";
 import { useEffect, useState } from "react";
 import Button from "./components/Button";
 
@@ -238,7 +240,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="carousel-content">
-                                                <div className="carousel-card">
+                        <div className="carousel-card">
                             <img src={ProfileImageOne} alt="Imagem perfil cliente" />
                             <span className="testimony">
                                 <p>
@@ -296,6 +298,61 @@ export default function Home() {
                             </span>
                         </div>
                     </div>
+                </section>
+            </section>
+
+            <section id="pricing" className="container">
+                <header>
+                    <p className="desktop-only">Planos e preços</p>
+                    <h2>Nossos planos</h2>
+                </header>
+
+                <section className="even-columns gap-1.5">
+                    <div className="pricing-card">
+                        <span className="plan">
+                            <h3>Básico</h3>
+                            <p>Você tem direito a uma prova das comidas DonaFrost.</p>
+                        </span>
+                        <h2>Grátis</h2>
+                        <Button text="Pedir agora" secondary key="free" />
+                        <span className="hr" /><span className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>Retire na loja</p>
+                        </span>
+                        <ul className="features">
+                            <li>
+                                <img src={Check} alt="ícone check" width={24} height={24} />
+                                <p>Apenas 1 por CPF</p>
+                            </li>
+                        </ul>
+                    </div>
+                                    <div className="pricing-card premium">
+                    <span className="bonus">
+                        <p>1º MÊS COM DESCONTO</p>
+                    </span>
+                    <span className="plan">
+                        <h3>Premium</h3>
+                        <p>Para quem precisa de uma marmita diária, muito saborosa.</p>
+                    </span>
+                    <span className="price">
+                        <h2>R$ 89,90</h2>
+                        <p>/mês</p>
+                    </span>
+                    <Button text="Pedir agora" key="premium" />
+                    <span className="hr" />
+                    <span className="features">
+                        <img src={Check} alt="ícone check" width={24} height={24} />
+                        <p>2 Entregas</p>
+                    </span>
+                    <span className="features">
+                        <img src={Check} alt="ícone check" width={24} height={24} />
+                        <p>5 Refeições por semana</p>
+                    </span>
+                    <span className="features">
+                        <img src={Check} alt="ícone check" width={24} height={24} />
+                        <p>2 Sucos por semana</p>
+                    </span>
+                </div>
                 </section>
             </section>
         </>
